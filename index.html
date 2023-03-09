@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script  type="text/babel">
+       function App(){
+        const name = 'simon'
+           let element = React.createElement(
+                    'div',{ className: 'greeting' },React.createElement('h1', null, 'Topics Covered'),React.createElement('p',null,'The following is the list of topics we will cover in MDN area'),
+                    React.createElement('a',{href:'https://developer.mozilla.org/en-US/'},'Getting started with Web'),
+                    React.createElement('p',null,'Provides a practical introduction  to web development for beginners'),
+                    React.createElement('a',{href:'https://developer.mozilla.org/en-US/'},'HTMl- Structuring the web'),
+                    React.createElement('p',null,'Html is the language that we use to structure different parts of our content and define what their meaning or purpose is.The topic teaches HTML in detail.'),
+                    React.createElement('a',{href:'https://developer.mozilla.org/en-US/'},'CSS- Styling the web'),
+                    React.createElement('p',null,'CSS is the language that we use to control our Web content style and layout.This topic gives us comprehensive coverage of CSS'),
+                );
+                return element
+          
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("app"));
+        root.render(<App/>)
+
+    </script>
+    
+</body>
+</html>
